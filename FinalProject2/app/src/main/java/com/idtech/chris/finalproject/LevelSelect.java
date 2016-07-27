@@ -29,43 +29,6 @@ public class LevelSelect extends Activity
 
         Intent intent = getIntent();
 
-        ImageView imageView = (ImageView)findViewById(R.id.rock);
-        imageView.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent event) {
-                switch (event.getActionMasked()) {
-                    case MotionEvent.ACTION_DOWN:
-                        xCoOrdinate = view.getX() - event.getRawX();
-                        yCoOrdinate = view.getY() - event.getRawY();
-                        break;
-                    case MotionEvent.ACTION_MOVE:
-                        view.animate().x(event.getRawX() + xCoOrdinate).y(event.getRawY() + yCoOrdinate).setDuration(0).start();
-                        break;
-                    default:
-                        return false;
-                }
-                return true;
-            }
-        });
-
-        ImageView imageView2 = (ImageView)findViewById(R.id.rock2);
-        imageView2.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent event) {
-                switch (event.getActionMasked()) {
-                    case MotionEvent.ACTION_DOWN:
-                        xCoOrdinate = view.getX() - event.getRawX();
-                        yCoOrdinate = view.getY() - event.getRawY();
-                        break;
-                    case MotionEvent.ACTION_MOVE:
-                        view.animate().x(event.getRawX() + xCoOrdinate).y(event.getRawY() + yCoOrdinate).setDuration(0).start();
-                        break;
-                    default:
-                        return false;
-                }
-                return true;
-            }
-        });
     }
 
     public void level1(View view)
