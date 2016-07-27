@@ -18,6 +18,7 @@ public class MainActivity extends Activity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.title_main);
+        getActionBar().hide();
     }
 
     public void enterGame(View view)

@@ -16,13 +16,14 @@ public class LevelSelect extends Activity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.levelselect_main);
+        getActionBar().hide();
 
         Intent intent = getIntent();
     }
 
     public void level1(View view)
     {
-        Intent intent = new Intent(this, LevelOne.class);
+        Intent intent = new Intent(this, GameActivity.class);
         startActivity(intent);
     }
 
