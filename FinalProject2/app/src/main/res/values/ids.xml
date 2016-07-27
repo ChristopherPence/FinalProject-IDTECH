@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="rock1" type="id"/>
+    <item name="rock2" type="id"/>
+    <item name="rock3" type="id"/>
+    <item name="ball1" type="id"/>
+    <item name="ball2" type="id"/>
+    <item name="ball3" type="id"/>
+
+</resources>
