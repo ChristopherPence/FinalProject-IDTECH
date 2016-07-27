@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
+import android.view.View;
 
 /**
  * Created by student on 7/26/2016.
@@ -25,6 +26,7 @@ public class OneLevel extends SurfaceView implements SurfaceHolder.Callback
         setFocusable(true);
 
         rock = new Rock(BitmapFactory.decodeResource(getResources(), R.drawable.rock), 50, 50);
+
     }
 
     @Override
@@ -58,19 +60,6 @@ public class OneLevel extends SurfaceView implements SurfaceHolder.Callback
     @Override
     public boolean onTouchEvent(MotionEvent event)
     {
-        if (event.getAction() == MotionEvent.ACTION_DOWN) {
-
-            if(event.getX() > getWidth()/2) {
-                rock.setXVelocity(5);
-            }
-            else {
-                rock.setXVelocity(-5);
-            }
-        }
-
-        if (event.getAction() == MotionEvent.ACTION_UP) {
-            rock.setXVelocity(0);
-        }
         return true;
     }
     @Override
