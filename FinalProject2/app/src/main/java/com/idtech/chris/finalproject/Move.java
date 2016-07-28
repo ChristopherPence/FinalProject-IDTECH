@@ -24,7 +24,12 @@ public class Move
                         break;
                     case MotionEvent.ACTION_MOVE:
                         view.animate().x(event.getRawX() + xCoOrdinate).y(event.getRawY() + yCoOrdinate).setDuration(0).start();
+                        view.setX(event.getRawX());
+                        view.setY(event.getRawY());
+                        System.out.println(view.getX() + " " + view.getY());
                         break;
+                    case MotionEvent.ACTION_UP:
+
                     default:
                         return false;
                 }

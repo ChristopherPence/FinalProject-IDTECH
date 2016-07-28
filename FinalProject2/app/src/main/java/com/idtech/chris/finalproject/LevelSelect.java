@@ -37,6 +37,12 @@ public class LevelSelect extends Activity
         startActivity(intent);
     }
 
+    public void loginButton(View view)
+    {
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
+    }
+
 
 
 }
