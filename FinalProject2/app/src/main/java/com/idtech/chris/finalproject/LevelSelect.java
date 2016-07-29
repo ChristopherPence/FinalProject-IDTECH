@@ -33,8 +33,7 @@ public class LevelSelect extends Activity
 
     public void level1(View view)
     {
-        Intent intent = new Intent(this, IntroLevel.class);
-        startActivity(intent);
+        System.out.println("");
     }
 
     public void loginButton(View view)

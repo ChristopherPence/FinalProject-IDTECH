@@ -5,8 +5,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 /**
@@ -33,13 +37,18 @@ public class LoginActivity extends Activity
         EditText user = (EditText) findViewById(R.id.username);
         EditText pass = (EditText) findViewById(R.id.password);
         SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
-        if(pass.getText().toString().equals(sharedPref.getString(user.getText().toString(), "")))
+        if(pass.getText().toString().equals(sharedPref.getString(user.getText().toString(), "321654321659874655431213216546879865462161979564621")))
         {
-            System.out.println("Test account logged in");
+            Intent intent = new Intent(this, IntroLevel.class);
+            startActivity(intent);
         }
         else
         {
             System.out.println("Log in failed");
+            PopupWindow popup = new PopupWindow(this);
+            RelativeLayout login_layout = new RelativeLayout(this);
+            popup.showAtLocation(login_layout, Gravity.CENTER, 10, 10);
+            popup.update();
         }
     }
 
